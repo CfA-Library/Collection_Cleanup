@@ -24,6 +24,6 @@ col_master = col_master[~col_master.MATERIAL.str.contains("VCASS")]
 col_master = col_master[~col_master.MATERIAL.str.contains("VIS")]
 
 
-col_master.to_csv("Wolbach_Collection_Mastersheet_v5.csv")
+col_master.to_csv("Wolbach_Collection_Mastersheet_v6.csv")
 
 print('CSV saved')
