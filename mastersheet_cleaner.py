@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-col_master = pd.read_csv("Wolbach_Collection_Mastersheet_v1.csv")
+col_master = pd.read_csv("Wolbach_Collection_Mastersheet_v1.csv", sep=',', error_bad_lines=False, index_col=False, dtype='unicode')
 list(col_master.columns.values)
 
 col_master['MATERIAL'] = col_master['MATERIAL'].astype('|S')
@@ -24,6 +24,6 @@ col_master = col_master[~col_master.MATERIAL.str.contains("VCASS")]
 col_master = col_master[~col_master.MATERIAL.str.contains("VIS")]
 
 
-col_master.to_csv("Wolbach_Collection_Mastersheet_v2.csv")
+col_master.to_csv("Wolbach_Collection_Mastersheet_v5.csv")
 
 print('CSV saved')
